@@ -30,7 +30,7 @@ def printTable(data):
 
 data = []
 
-setData('input_10.txt', data)
+setData('input_100.txt', data)
 
 # Firts Exersice
 printTable(data)
