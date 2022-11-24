@@ -104,21 +104,15 @@ def lineofregression(X, Y):
     sumx2 = sum(X) * sum(X)
     sumy2 = sum(Y) * sum(Y)
 
-    byx = (len(X) * sumxy - (sumx * sumy)) / (len(X) * sumx2 - sumx2)
+    ryx = (len(X) * sumxy - (sumx * sumy)) / (len(X) * sumx2 - sumx2)
 
-    x, y = sp.symbols("x,y")
-    line = sp.Eq(y-avgY, byx*(x-avgX))
+    x, y = sp.symbols("x, y")
+    line = sp.Eq(y-avgY, ryx * (x - avgX))
     linex = sp.solve(line, y)
     liney = sp.solve(line, x)
-    strlinex = str(linex)
-    strliney = str(liney)
-    strlinex = strlinex.replace("[", "")
-    strlinex = strlinex.replace("]", "")
-    strliney = strliney.replace("[", "")
-    strliney = strliney.replace("]", "")
-    print("Line of regression of y on x")
-    print("x = " + strliney)
-    print("y = " + strlinex, "\t(y on x)")
+    print("Result:")
+    print("x = ", liney)
+    print("y = ", linex)
 
 
 setData("./input_10.txt")

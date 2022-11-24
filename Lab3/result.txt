@@ -9,6 +9,6 @@ Covarince:  25.09090909090909
 Correlation coefficient: 0.9010014623100246
 
 
-Line of regression of y on x
-x = 0.111190476190476*y
-y = 8.99357601713062*x 	(y on x)
+Result:
+x =  [0.111190476190476*y]
+y =  [8.99357601713062*x]
